@@ -10,33 +10,53 @@ Static personal blog website. Pure HTML/CSS/JS with no build tools or dependenci
 
 ```
 /
-├── index.html              # Home page
+├── index.html              # Home page (latest posts)
 ├── 404.html                # Error page
 ├── robots.txt              # SEO
-├── sitemap.xml             # SEO
-├── feed.xml                # RSS feed
+├── sitemap.xml             # SEO (17 URLs)
+├── feed.xml                # RSS feed (3 posts)
 ├── css/
 │   ├── main.css            # Core styles + CSS variables
 │   ├── prose.css           # Typography for content
 │   └── prism.css           # Code syntax highlighting
 ├── js/
-│   ├── theme.js            # Dark/light/system toggle
+│   ├── theme.js            # Dark/light/system toggle + footer year
 │   └── mobile-nav.js       # Mobile hamburger menu
-├── images/                 # All static images
+├── images/
+│   ├── favicon.png         # Site favicon (copy of authors/default.png)
+│   ├── twitter-card.png    # Open Graph image for home
+│   ├── authors/
+│   │   ├── default.png     # Author avatar (header logo)
+│   │   └── default.jpg     # Author avatar (alternate)
+│   └── [post-slug]/        # Post cover images
+│       └── cover-*.png/jpg
 ├── now/index.html          # /now page
 ├── about/index.html        # /about page
 ├── blog/
-│   ├── index.html          # Blog listing
-│   └── [slug]/index.html   # Individual posts
+│   ├── index.html          # Blog listing (all posts)
+│   └── [slug]/index.html   # Individual posts (3 posts)
 └── tags/
-    ├── index.html          # All tags
-    └── [tag]/index.html    # Posts by tag
+    ├── index.html          # All tags listing
+    └── [tag]/index.html    # Posts filtered by tag (9 tags)
 ```
+
+## Current Content
+
+### Blog Posts (3)
+- `good-bye-ui-hello-chatbots` (2016-02-08) - tags: chatbots, messaging, slack
+- `using-ng-repeat-in-a-range` (2015-05-30) - tags: javascript, angularjs, ng-repeat
+- `renuncie-a-mi-trabajo-ahora-solo-cobro-en-bitcoin` (2014-02-06) - tags: bitcoin, crypto, open-source
+
+### Tags (9)
+chatbots, messaging, slack, javascript, angularjs, ng-repeat, bitcoin, crypto, open-source
 
 ## URLs
 
 Clean URLs via directory structure (each page is `folder/index.html`):
 - `/blog/my-post` → `blog/my-post/index.html`
+- `/tags/bitcoin` → `tags/bitcoin/index.html`
+
+**Important:** Use absolute paths in all HTML files (`/css/`, `/js/`, `/images/`) for consistency across nested directories.
 
 ## Theme System
 
@@ -44,6 +64,13 @@ Clean URLs via directory structure (each page is `folder/index.html`):
 - JavaScript toggles `.dark` class on `<html>`
 - localStorage persists preference
 - Anti-flash inline script in `<head>` prevents FOUC
+
+## Footer Year
+
+The footer year updates automatically via `js/theme.js`:
+```html
+<div>&copy; 2014 - <span class="current-year">2025</span></div>
+```
 
 ## Key CSS Variables
 
@@ -60,28 +87,52 @@ Clean URLs via directory structure (each page is `folder/index.html`):
 --font-sans: 'Noto Sans', system-ui, sans-serif;
 ```
 
-## Adding New Content
+## Checklists
 
 ### New Blog Post
-1. Create `blog/[slug]/index.html`
-2. Copy structure from existing post
-3. Update title, date, content, tags, prev/next nav
-4. Add entry to `blog/index.html` listing
-5. Update tag pages if needed
-6. Update `sitemap.xml` and `feed.xml`
+
+1. [ ] Create `blog/[slug]/index.html` (copy from existing post)
+2. [ ] Update in HTML:
+   - `<title>` and `<meta name="description">`
+   - Open Graph tags (`og:title`, `og:description`, `og:url`, `og:image`)
+   - Post title, date, author, reading time
+   - Content
+   - Tags links
+   - Prev/Next navigation
+3. [ ] Add cover image to `images/[slug]/cover-*.png`
+4. [ ] Add to `blog/index.html` listing (newest first)
+5. [ ] Add to `index.html` home page (if recent)
+6. [ ] Add to relevant `tags/[tag]/index.html` pages
+7. [ ] Create new tag pages if needed (see below)
+8. [ ] Add to `feed.xml` (newest first)
+9. [ ] Add to `sitemap.xml`
+
+### New Tag
+
+1. [ ] Create `tags/[tag]/index.html` (copy from existing tag)
+2. [ ] Update tag name in `<title>`, `<h1>`, and `<meta>`
+3. [ ] Add relevant posts to the listing
+4. [ ] Add to `tags/index.html`
+5. [ ] Add to `sitemap.xml`
 
 ### New Page
-1. Create `[page]/index.html`
-2. Copy header/footer from existing page
-3. Add navigation link to all pages' header
+
+1. [ ] Create `[page]/index.html` (copy header/footer from existing)
+2. [ ] Add navigation link to ALL pages:
+   - Desktop nav: `<nav class="header-nav">`
+   - Mobile nav: `<nav class="mobile-nav-links">`
+3. [ ] Add to `sitemap.xml`
+
+## Files to Update When Adding Content
+
+| Action | Files to Update |
+|--------|-----------------|
+| New post | post HTML, blog/index.html, index.html, tag pages, feed.xml, sitemap.xml |
+| New tag | tag HTML, tags/index.html, sitemap.xml |
+| New page | page HTML, ALL nav menus (18 files), sitemap.xml |
 
 ## Deployment
 
-Works on any static hosting:
-- GitHub Pages
-- Netlify
-- Vercel
-- S3/CloudFront
-- Any web server
+Works on any static hosting: GitHub Pages, Netlify, Vercel, S3/CloudFront, any web server.
 
 No build step required. Just upload files.
