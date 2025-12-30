@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>colkito's web</title>
+    <link>https://colkito.com</link>
+    <description>Argentine-born, Brazil-based tech enthusiast and digital explorer.</description>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 15 Jul 2024 00:00:00 GMT</lastBuildDate>
+    <atom:link href="https://colkito.com/feed.xml" rel="self" type="application/rss+xml"/>
+
+    <item>
+      <title>Good Bye UI. Hello chatbots!</title>
+      <link>https://colkito.com/blog/good-bye-ui-hello-chatbots</link>
+      <description>The rising trend of messaging apps as the future of user interaction</description>
+      <pubDate>Mon, 08 Feb 2016 08:35:07 GMT</pubDate>
+      <guid isPermaLink="true">https://colkito.com/blog/good-bye-ui-hello-chatbots</guid>
+    </item>
+
+    <item>
+      <title>Using ng-repeat in a range</title>
+      <link>https://colkito.com/blog/using-ng-repeat-in-a-range</link>
+      <description>How to enhance ng-repeat in AngularJS with a Custom Range Filter</description>
+      <pubDate>Sat, 30 May 2015 08:35:07 GMT</pubDate>
+      <guid isPermaLink="true">https://colkito.com/blog/using-ng-repeat-in-a-range</guid>
+    </item>
+
+    <item>
+      <title>Renuncié a mi trabajo. Ahora solo cobro en Bitcoin.</title>
+      <link>https://colkito.com/blog/renuncie-a-mi-trabajo-ahora-solo-cobro-en-bitcoin</link>
+      <description>Pasando de un sueldo a la criptomoneda</description>
+      <pubDate>Thu, 06 Feb 2014 08:35:07 GMT</pubDate>
+      <guid isPermaLink="true">https://colkito.com/blog/renuncie-a-mi-trabajo-ahora-solo-cobro-en-bitcoin</guid>
+    </item>
+  </channel>
+</rss>

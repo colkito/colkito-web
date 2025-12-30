@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en-us" class="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
+  <title>Using ng-repeat in a range | colkito's web</title>
+  <meta name="description" content="How to enhance ng-repeat in AngularJS with a Custom Range Filter">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Using ng-repeat in a range">
+  <meta property="og:description" content="How to enhance ng-repeat in AngularJS with a Custom Range Filter">
+  <meta property="og:url" content="https://colkito.com/blog/using-ng-repeat-in-a-range">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://colkito.com/images/using-ng-repeat-in-a-range/cover-kf83jg62.png">
+  <meta property="article:published_time" content="2015-05-30T05:35:07-03:00">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/images/logo.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Anti-flash script -->
+  <script>
+    (function() {
+      var theme = localStorage.getItem('theme') || 'system';
+      var isDark = theme === 'dark' || (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      if (isDark) document.documentElement.classList.add('dark');
+    })();
+  </script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/prose.css">
+  <link rel="stylesheet" href="/css/prism.css">
+</head>
+<body>
+  <div class="section-container">
+    <div class="site-wrapper">
+
+      <!-- Header -->
+      <header class="site-header">
+        <div>
+          <a href="/" aria-label="colkito's web" class="header-logo">
+            <img src="/images/authors/default.png" alt="colkito" width="36" height="36">
+          </a>
+        </div>
+        <nav class="header-nav">
+          <a href="/now" class="nav-link">Now</a>
+          <a href="/blog" class="nav-link">Blog</a>
+          <a href="/tags" class="nav-link">Tags</a>
+          <a href="/projects" class="nav-link">Projects</a>
+          <a href="/about" class="nav-link">About</a>
+
+          <div class="theme-switch">
+            <button id="theme-toggle-btn" class="theme-switch-btn" aria-label="Toggle theme">
+              <svg id="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" style="display: none;">
+                <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/>
+              </svg>
+              <svg id="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" style="display: none;">
+                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>
+              </svg>
+            </button>
+            <div id="theme-menu" class="theme-menu">
+              <div class="theme-menu-inner">
+                <button class="theme-option" data-theme="light">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/></svg>
+                  Light
+                </button>
+                <button class="theme-option" data-theme="dark">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/></svg>
+                  Dark
+                </button>
+                <button class="theme-option" data-theme="system">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="14" height="10" rx="2" ry="2"></rect><line x1="7" y1="17" x2="13" y2="17"></line><line x1="10" y1="13" x2="10" y2="17"></line></svg>
+                  System
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <button id="mobile-nav-toggle" class="mobile-nav-toggle" aria-label="Toggle Menu">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/>
+            </svg>
+          </button>
+        </nav>
+      </header>
+
+      <!-- Mobile Nav -->
+      <div id="mobile-nav-overlay" class="mobile-nav-overlay"></div>
+      <div id="mobile-nav-panel" class="mobile-nav-panel">
+        <nav class="mobile-nav-links">
+          <a href="/" class="mobile-nav-link">Home</a>
+          <a href="/now" class="mobile-nav-link">Now</a>
+          <a href="/blog" class="mobile-nav-link">Blog</a>
+          <a href="/tags" class="mobile-nav-link">Tags</a>
+          <a href="/projects" class="mobile-nav-link">Projects</a>
+          <a href="/about" class="mobile-nav-link">About</a>
+        </nav>
+        <button id="mobile-nav-close" class="mobile-nav-close" aria-label="Close Menu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Main Content -->
+      <main>
+        <article>
+          <!-- Banner Image -->
+          <img src="/images/using-ng-repeat-in-a-range/cover-kf83jg62.png" alt="Using ng-repeat in a range" class="post-banner">
+
+          <!-- Header -->
+          <header class="post-page-header">
+            <time datetime="2015-05-30" class="post-page-date">May 30, 2015</time>
+            <h1 class="post-page-title">Using ng-repeat in a range</h1>
+            <p class="post-page-subtitle">How to enhance ng-repeat in AngularJS with a Custom Range Filter</p>
+          </header>
+
+          <!-- Content -->
+          <div class="post-body">
+            <div class="prose max-w-none">
+              <p>AngularJS, the popular JavaScript framework, is known for its powerful directives, and <code>ng-repeat</code> is one of them, allowing us to repeat an element based on a collection. However, sometimes, we need to repeat an element a specific number of times, not based on an existing array. By default, AngularJS does not provide this functionality, but we can extend it with a custom filter.</p>
+
+              <h2>Creating a Range Filter</h2>
+
+              <p>To achieve this, we can create a simple filter named <code>range</code>. This filter will generate an array of numbers from 0 to the specified count, which we can then use with <code>ng-repeat</code>.</p>
+
+              <p>Here's how we can define this filter:</p>
+
+              <pre><code class="language-javascript"><span class="token string">'use strict'</span>
+<span class="token function">angular</span><span class="token punctuation">.</span><span class="token function">module</span><span class="token punctuation">(</span><span class="token string">'MYAPP'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token string">'range'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">input<span class="token punctuation">,</span> total</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    total <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>total<span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> total<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      input<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> input
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
+
+              <p>In this snippet, we define a filter <code>range</code> that takes two parameters: <code>input</code> and <code>total</code>. The <code>total</code> parameter specifies the number of times the element should be repeated. The filter then populates an array from 0 to <code>total - 1</code>.</p>
+
+              <h2>Basic Usage</h2>
+
+              <p>To use this filter with <code>ng-repeat</code>, you would write something like the following in your HTML:</p>
+
+              <pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">ng-repeat</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>n in [] | range:X<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>{{$index}} - This will repeat X times.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span></code></pre>
+
+              <p>Replace <code>X</code> with the number of times you want to repeat the element. The <code>ng-repeat</code> directive will iterate over the array generated by the <code>range</code> filter.</p>
+
+              <h2>Conclusion</h2>
+
+              <p>While AngularJS does not natively support repeating an element a fixed number of times, this custom <code>range</code> filter provides a neat and straightforward way to extend <code>ng-repeat</code> functionality to cover this use case.</p>
+
+              <p>Remember, this approach is specific to AngularJS (the predecessor of Angular 2+). In newer versions of Angular, you might use different techniques due to the changes in the framework's architecture and capabilities.</p>
+            </div>
+          </div>
+
+          <!-- Footer -->
+          <footer class="post-footer">
+            <div class="post-tags">
+              <p class="post-tags-label">Tags</p>
+              <div class="tags-list">
+                <a href="/tags/angularjs" class="tag">AngularJS</a>
+                <a href="/tags/ng-repeat" class="tag">NG Repeat</a>
+                <a href="/tags/javascript" class="tag">Javascript</a>
+              </div>
+            </div>
+
+            <nav class="post-nav">
+              <div class="post-nav-prev">
+                <p class="post-nav-label">Previous Article</p>
+                <a href="/blog/good-bye-ui-hello-chatbots">Good Bye UI. Hello chatbots!</a>
+              </div>
+              <div class="post-nav-next">
+                <p class="post-nav-label">Next Article</p>
+                <a href="/blog/renuncie-a-mi-trabajo-ahora-solo-cobro-en-bitcoin">Renuncié a mi trabajo...</a>
+              </div>
+            </nav>
+          </footer>
+        </article>
+      </main>
+
+      <!-- Footer -->
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div class="social-icons">
+            <a href="mailto:hello@colkito.com" class="social-icon" aria-label="Email">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+            </a>
+            <a href="https://github.com/colkito" class="social-icon" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="https://x.com/colkitoxyz" class="social-icon" aria-label="X" target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+          </div>
+          <div class="footer-meta">
+            <div>&copy; 2014 - <span class="current-year">2024</span></div>
+            <div>&bull;</div>
+            <a href="/">colkito's web</a>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+  </div>
+
+  <script src="/js/theme.js"></script>
+  <script src="/js/mobile-nav.js"></script>
+</body>
+</html>

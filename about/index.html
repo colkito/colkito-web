@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en-us" class="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
+  <title>About | colkito's web</title>
+  <meta name="description" content="About colkito - tech enthusiast and digital explorer.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="About | colkito's web">
+  <meta property="og:description" content="About colkito - tech enthusiast and digital explorer.">
+  <meta property="og:url" content="https://colkito.com/about">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/images/logo.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Anti-flash script -->
+  <script>
+    (function() {
+      var theme = localStorage.getItem('theme') || 'system';
+      var isDark = theme === 'dark' || (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      if (isDark) document.documentElement.classList.add('dark');
+    })();
+  </script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/prose.css">
+</head>
+<body>
+  <div class="section-container">
+    <div class="site-wrapper">
+
+      <!-- Header -->
+      <header class="site-header">
+        <div>
+          <a href="/" aria-label="colkito's web" class="header-logo">
+            <img src="/images/authors/default.png" alt="colkito" width="36" height="36">
+          </a>
+        </div>
+        <nav class="header-nav">
+          <a href="/now" class="nav-link">Now</a>
+          <a href="/blog" class="nav-link">Blog</a>
+          <a href="/tags" class="nav-link">Tags</a>
+          <a href="/projects" class="nav-link">Projects</a>
+          <a href="/about" class="nav-link">About</a>
+
+          <!-- Theme Switch -->
+          <div class="theme-switch">
+            <button id="theme-toggle-btn" class="theme-switch-btn" aria-label="Toggle theme">
+              <svg id="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" style="display: none;">
+                <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/>
+              </svg>
+              <svg id="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" style="display: none;">
+                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>
+              </svg>
+            </button>
+            <div id="theme-menu" class="theme-menu">
+              <div class="theme-menu-inner">
+                <button class="theme-option" data-theme="light">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/>
+                  </svg>
+                  Light
+                </button>
+                <button class="theme-option" data-theme="dark">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>
+                  </svg>
+                  Dark
+                </button>
+                <button class="theme-option" data-theme="system">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="14" height="10" rx="2" ry="2"></rect>
+                    <line x1="7" y1="17" x2="13" y2="17"></line>
+                    <line x1="10" y1="13" x2="10" y2="17"></line>
+                  </svg>
+                  System
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mobile Nav Toggle -->
+          <button id="mobile-nav-toggle" class="mobile-nav-toggle" aria-label="Toggle Menu">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/>
+            </svg>
+          </button>
+        </nav>
+      </header>
+
+      <!-- Mobile Nav -->
+      <div id="mobile-nav-overlay" class="mobile-nav-overlay"></div>
+      <div id="mobile-nav-panel" class="mobile-nav-panel">
+        <nav class="mobile-nav-links">
+          <a href="/" class="mobile-nav-link">Home</a>
+          <a href="/now" class="mobile-nav-link">Now</a>
+          <a href="/blog" class="mobile-nav-link">Blog</a>
+          <a href="/tags" class="mobile-nav-link">Tags</a>
+          <a href="/projects" class="mobile-nav-link">Projects</a>
+          <a href="/about" class="mobile-nav-link">About</a>
+        </nav>
+        <button id="mobile-nav-close" class="mobile-nav-close" aria-label="Close Menu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Main Content -->
+      <main>
+        <div class="about-content">
+          <div class="about-header">
+            <img src="/images/authors/default.png" alt="colkito" class="about-avatar">
+            <div class="about-info">
+              <h3 class="about-name">colkito</h3>
+              <p class="about-role">Tech enthusiast & Digital explorer</p>
+              <div class="about-social">
+                <a href="mailto:hello@colkito.com" class="social-icon" aria-label="Email">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" style="width: 1.25rem; height: 1.25rem;" fill="currentColor">
+                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                  </svg>
+                </a>
+                <a href="https://github.com/colkito" class="social-icon" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 1.25rem; height: 1.25rem;" fill="currentColor">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                  </svg>
+                </a>
+                <a href="https://x.com/colkitoxyz" class="social-icon" aria-label="X" target="_blank" rel="noopener noreferrer">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 1.25rem; height: 1.25rem;" fill="currentColor">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="prose max-w-none">
+            <h1>About me</h1>
+            <p>Born under the sunny skies of Salta, Argentina, I now call the beautiful beaches of Brazil my home. Life's quite the adventure, isn't it?</p>
+
+            <h2>My Journey</h2>
+            <p>As a kid, I was always tinkering with gadgets. While my friends were out playing soccer, I was in my room, surrounded by circuit boards and coding manuals like ASM for PICs, and PHP. A cool hobby, right?</p>
+
+            <p>These days, I'm all about pushing the boundaries of tech. Think of me as a digital explorer, venturing into the frontiers of:</p>
+            <ul>
+              <li>Web technologies (my first love)</li>
+              <li>Blockchain (because who doesn't love a good puzzle?)</li>
+              <li>AI (teaching machines to dream... what could go wrong?)</li>
+              <li>IoT (making doors smart since 2004)</li>
+              <li>Robotics (still working on that helpful robot)</li>
+            </ul>
+
+            <h2>What Makes Me Tick</h2>
+            <p>I'm a firm believer in the power of open-source. Why keep the good stuff to yourself when you can share it with the world?</p>
+            <p>Privacy and freedom online? I'm IN. I encrypt my emails, my chats, and probably my shopping lists too. Can't be too careful, right?</p>
+
+            <h2>When I'm Not Coding...</h2>
+            <p>You'll find me lost in some art expo, enjoying a music concert or some cultural show.</p>
+            <p>Or maybe I'm out in nature, trying to teach trees about blockchain. They're not great listeners, but they're always branching out.</p>
+
+            <h2>My Mission</h2>
+            <p>"Decentralize all the thinks!" It's not just a typo, it's a way of life. I'm here to shake things up in that way, one line of code at a time.</p>
+            <p>So, if you're into tech that makes a difference, art that speaks to your soul, or just want to chat about why centralized systems are so last century, drop me a line!</p>
+            <p>Let's make the digital world a bit more colorful, shall we?</p>
+            <p>PS: Wanna know what I'm up to right now? Check out my <a href="/now">"now" page</a>.</p>
+          </div>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div class="social-icons">
+            <a href="mailto:hello@colkito.com" class="social-icon" aria-label="Email">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+              </svg>
+            </a>
+            <a href="https://github.com/colkito" class="social-icon" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+            </a>
+            <a href="https://x.com/colkitoxyz" class="social-icon" aria-label="X" target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+          </div>
+          <div class="footer-meta">
+            <div>&copy; 2014 - <span class="current-year">2024</span></div>
+            <div>&bull;</div>
+            <a href="/">colkito's web</a>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+  </div>
+
+  <script src="/js/theme.js"></script>
+  <script src="/js/mobile-nav.js"></script>
+</body>
+</html>
