@@ -25,6 +25,7 @@ Static personal blog website. Pure HTML/CSS/JS with no build tools or dependenci
 ├── images/
 │   ├── favicon.png         # Site favicon (copy of authors/default.png)
 │   ├── twitter-card.png    # Open Graph image for home
+│   ├── ai.png              # AI assisted badge icon
 │   ├── authors/
 │   │   ├── default.png     # Author avatar (header logo)
 │   │   └── default.jpg     # Author avatar (alternate)
@@ -44,7 +45,7 @@ Static personal blog website. Pure HTML/CSS/JS with no build tools or dependenci
 
 ### Blog Posts (3)
 - `good-bye-ui-hello-chatbots` (2016-02-08) - tags: chatbots, messaging, slack
-- `using-ng-repeat-in-a-range` (2015-05-30) - tags: javascript, angularjs, ng-repeat
+- `using-ng-repeat-in-a-range` (2015-05-30) - tags: javascript, angularjs, ng-repeat - **AI assisted**
 - `renuncie-a-mi-trabajo-ahora-solo-cobro-en-bitcoin` (2014-02-06) - tags: bitcoin, crypto, open-source
 
 ### Tags (9)
@@ -70,6 +71,23 @@ Clean URLs via directory structure (each page is `folder/index.html`):
 The footer year updates automatically via `js/theme.js`:
 ```html
 <div>&copy; 2014 - <span class="current-year">2025</span></div>
+```
+
+## AI Assisted Badge
+
+For posts with AI-assisted content, add the badge after the subtitle:
+```html
+<header class="post-page-header">
+  <time datetime="YYYY-MM-DD" class="post-page-date">Month DD, YYYY</time>
+  <h1 class="post-page-title">Post Title</h1>
+  <p class="post-page-subtitle">Post summary</p>
+  <div class="ai-badge-wrapper">
+    <span class="ai-badge">
+      <img src="/images/ai.png" alt="AI" width="14" height="14">
+      AI assisted
+    </span>
+  </div>
+</header>
 ```
 
 ## Key CSS Variables
