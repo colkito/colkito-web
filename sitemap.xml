@@ -2,28 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://colkito.com/</loc>
-    <lastmod>2024-07-15</lastmod>
+    <lastmod>2025-12-30</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://colkito.com/now</loc>
-    <lastmod>2024-07-15</lastmod>
+    <lastmod>2025-12-30</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://colkito.com/about</loc>
-    <lastmod>2024-07-15</lastmod>
+    <lastmod>2025-12-30</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://colkito.com/blog</loc>
-    <lastmod>2024-07-15</lastmod>
+    <lastmod>2025-12-30</lastmod>
     <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://colkito.com/tags</loc>
-    <lastmod>2024-07-15</lastmod>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://colkito.com/blog/good-bye-ui-hello-chatbots</loc>
@@ -39,5 +34,55 @@
     <loc>https://colkito.com/blog/renuncie-a-mi-trabajo-ahora-solo-cobro-en-bitcoin</loc>
     <lastmod>2014-02-06</lastmod>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://colkito.com/tags</loc>
+    <lastmod>2025-12-30</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://colkito.com/tags/chatbots</loc>
+    <lastmod>2025-12-30</lastmod>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://colkito.com/tags/messaging</loc>
+    <lastmod>2025-12-30</lastmod>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://colkito.com/tags/slack</loc>
+    <lastmod>2025-12-30</lastmod>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://colkito.com/tags/javascript</loc>
+    <lastmod>2025-12-30</lastmod>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://colkito.com/tags/angularjs</loc>
+    <lastmod>2025-12-30</lastmod>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://colkito.com/tags/ng-repeat</loc>
+    <lastmod>2025-12-30</lastmod>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://colkito.com/tags/bitcoin</loc>
+    <lastmod>2025-12-30</lastmod>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://colkito.com/tags/crypto</loc>
+    <lastmod>2025-12-30</lastmod>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://colkito.com/tags/open-source</loc>
+    <lastmod>2025-12-30</lastmod>
+    <priority>0.4</priority>
   </url>
 </urlset>
