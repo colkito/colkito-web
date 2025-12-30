@@ -25,7 +25,6 @@ Static personal blog website. Pure HTML/CSS/JS with no build tools or dependenci
 ├── images/                 # All static images
 ├── now/index.html          # /now page
 ├── about/index.html        # /about page
-├── projects/index.html     # /projects page
 ├── blog/
 │   ├── index.html          # Blog listing
 │   └── [slug]/index.html   # Individual posts

@@ -18,7 +18,6 @@ colkito-web/
 ├── index.html              # Home page
 ├── now/index.html          # Now page
 ├── about/index.html        # About page
-├── projects/index.html     # Projects page
 ├── blog/
 │   ├── index.html          # Blog listing
 │   └── [post]/index.html   # Individual posts
