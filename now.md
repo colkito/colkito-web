@@ -27,4 +27,4 @@ Interested in "now" pages? [Learn more here](https://nownownow.com/about).
 ---
 
 © 2014 - 2026 · [colkito's web](index.md)
-[hello@colkito.com](mailto:hello@colkito.com) · [GitHub](https://github.com/colkito) · [X](https://x.com/colkitoxyz)
+[hello@colkito.com](mailto:hello@colkito.com) · [GitHub](https://github.com/colkito) · [X](https://x.com/colkito)

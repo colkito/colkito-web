@@ -49,4 +49,4 @@ Un mensaje que me gustaría dejar hoy:
 ---
 
 © 2014 - 2026 · [colkito's web](../index.md)
-[hello@colkito.com](mailto:hello@colkito.com) · [GitHub](https://github.com/colkito) · [X](https://x.com/colkitoxyz)
+[hello@colkito.com](mailto:hello@colkito.com) · [GitHub](https://github.com/colkito) · [X](https://x.com/colkito)

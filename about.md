@@ -8,7 +8,7 @@
 
 Tech enthusiast & Digital explorer
 
-[hello@colkito.com](mailto:hello@colkito.com) · [GitHub](https://github.com/colkito) · [X](https://x.com/colkitoxyz)
+[hello@colkito.com](mailto:hello@colkito.com) · [GitHub](https://github.com/colkito) · [X](https://x.com/colkito)
 
 ---
 
@@ -53,4 +53,4 @@ PS: Wanna know what I'm up to right now? Check out my [now page](now.md).
 ---
 
 © 2014 - 2026 · [colkito's web](index.md)
-[hello@colkito.com](mailto:hello@colkito.com) · [GitHub](https://github.com/colkito) · [X](https://x.com/colkitoxyz)
+[hello@colkito.com](mailto:hello@colkito.com) · [GitHub](https://github.com/colkito) · [X](https://x.com/colkito)
