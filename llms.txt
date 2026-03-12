@@ -1,0 +1,38 @@
+# colkito's web
+
+> Argentine-born, Brazil-based tech enthusiast and digital explorer.
+> Passionate about web tech, blockchain, AI, IoT, and robotics.
+> Advocate for online privacy and digital freedom.
+> Believer in the power of open-source and decentralization.
+
+## Pages
+
+- [Home](https://colkito.com/index.md): Introduction and latest blog posts
+- [Now](https://colkito.com/now.md): What colkito is currently doing
+- [About](https://colkito.com/about.md): Background, story and interests
+- [Blog](https://colkito.com/blog.md): All blog posts
+- [Tags](https://colkito.com/tags.md): All tags
+
+## Blog Posts
+
+- [Good Bye UI. Hello chatbots!](https://colkito.com/blog/good-bye-ui-hello-chatbots.md): February 8, 2016 — The rising trend of messaging apps as the future of user interaction
+- [Using ng-repeat in a range](https://colkito.com/blog/using-ng-repeat-in-a-range.md): May 30, 2015 — How to enhance ng-repeat in AngularJS with a Custom Range Filter (AI assisted)
+- [Renuncié a mi trabajo. Ahora solo cobro en Bitcoin.](https://colkito.com/blog/renuncie-a-mi-trabajo-ahora-solo-cobro-en-bitcoin.md): February 6, 2014 — Pasando de un sueldo a la criptomoneda
+
+## Tags
+
+- [javascript](https://colkito.com/tags/javascript.md) (2 posts)
+- [bitcoin](https://colkito.com/tags/bitcoin.md) (1 post)
+- [crypto](https://colkito.com/tags/crypto.md) (1 post)
+- [open-source](https://colkito.com/tags/open-source.md) (1 post)
+- [chatbots](https://colkito.com/tags/chatbots.md) (1 post)
+- [messaging](https://colkito.com/tags/messaging.md) (1 post)
+- [slack](https://colkito.com/tags/slack.md) (1 post)
+- [angularjs](https://colkito.com/tags/angularjs.md) (1 post)
+- [ng-repeat](https://colkito.com/tags/ng-repeat.md) (1 post)
+
+## Contact
+
+- Email: hello@colkito.com
+- GitHub: https://github.com/colkito
+- X: https://x.com/colkitoxyz
